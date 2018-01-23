@@ -1,0 +1,110 @@
+.myContainer {
+    background-color: rgba(34, 34, 34, 0.96);
+    position: relative;
+    min-height: 100%;
+    color: #eee9e9;
+}
+
+/*头部导航栏*/
+.nav {
+    justify-content: center;
+    align-items: center;
+    display: -webkit-flex; /*webkit内核*/
+    flex-wrap: wrap;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.navItem a:link {
+    color: #eee9e9;
+    text-decoration: none;
+    outline: none;
+}
+
+.navItem a:visited {
+    color: #eee9e9;
+    border-bottom: 5px solid gray;
+    padding-bottom: 8px;
+}
+
+.navItem a:hover {
+    color: #a8a3a3;
+    border-bottom: 5px solid gray;
+    padding-bottom: 8px;
+}
+
+.navItem a:active {
+    color: #a8a3a3;
+    border-bottom: 5px solid gray;
+    padding-bottom: 8px;
+}
+
+.navBrand a:link {
+    color: #eee9e9;
+    text-decoration: none;
+    outline: none;
+}
+
+.navBrand a:visited {
+    color: #eee9e9;
+    text-decoration: none;
+}
+
+.navBrand a:hover {
+    color: #eee9e9;
+    text-decoration: none;
+}
+
+.navBrand a:active {
+    color: #eee9e9;
+    text-decoration: none;
+}
+
+.navBrand {
+    font-size: 30px;
+}
+
+.navItem {
+    font-size: 16px;
+    margin-left: 26px;
+}
+
+/*主体*/
+.main {
+    text-align: center;
+}
+
+.main .content {
+    margin-top: 26%;
+}
+
+.main .introduction {
+    font-size: 20px;
+}
+
+.main .ovalBtn {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 146px;
+    border-radius: 6px;
+    text-align: center;
+    color: #282324;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #f8f3f3;
+}
+
+/*.push{
+    padding-bottom: 30px;
+}*/
+
+/*页脚*/
+.footer {
+    position: absolute;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    text-align: center;
+}
