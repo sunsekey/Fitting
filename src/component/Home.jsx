@@ -18,7 +18,7 @@ class Home extends React.Component {
                 name: "Fitting"
             },
             itemProps: [
-                {nae: "Training Note", url: "training-note"}, {name: "Album", url: "album"}, {
+                {name: "Training Note", url: "training-note"}, {name: "Album", url: "album"}, {
                     name: "About",
                     url: "about"
                 }
