@@ -15,11 +15,11 @@ class Introduction extends Component {
             <Row className="main">
                 <Col md={3}/>
                 <Col md={6}>
-                    <div className="content">
+                    <div>
                         <h1>{title}</h1>
                         <p className="introduction">{introduction}</p>
                         <div>
-                            <RippleButton content={buttonContent}/>
+                            <RippleButton content={buttonContent} className="startBtn"/>
                         </div>
                     </div>
                 </Col>

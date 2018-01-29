@@ -6,6 +6,10 @@
     border: 1px solid firebrick;
 }
 
+.center{
+    text-align: center;
+}
+
 /*按钮样式*/
 button {
     outline: none;
@@ -36,4 +40,54 @@ button {
     transform: scale(0, 0);
     opacity: .3;
     transition: 0s;
+}
+
+
+/*about:test for now*/
+.optionWrapper{
+    border: 1px solid cadetblue;
+    border-radius: 4px;
+    display:inline-block;
+    list-style: none;
+    padding-left:0;
+}
+.option {
+    display: inline-block;
+    font-size:16px;
+    line-height:16px;
+    padding:6px 10px;
+    cursor:pointer;
+    width:80px;
+}
+
+.optionWrapper li:nth-last-child(1),li:nth-child(1) .option{
+    border-radius: 4px;
+}
+
+.option:hover{
+    background-color: #f8f1f1;
+}
+
+.animated {
+    -webkit-animation-duration: 0.6s;
+    animation-duration: 0.6s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+.zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        /*-webkit-transform: scale3d(.3,.3,.3);*/
+        /*transform: scale3d(.3,.3,.3)*/
+    }
+
+    100% {
+        opacity: 1
+    }
 }

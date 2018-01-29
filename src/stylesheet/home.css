@@ -1,17 +1,17 @@
 .myContainer {
-    background-color: rgba(34, 34, 34, 0.96);
+    color: rgba(34, 34, 34, 0.96);
     position: relative;
     min-height: 100%;
-    color: #eee9e9;
+    background-color: #fefef8;
 }
 
 /*头部导航栏*/
 .nav {
+    background-color: rgba(34, 34, 34, 0.96);
     justify-content: center;
     align-items: center;
     display: -webkit-flex; /*webkit内核*/
     flex-wrap: wrap;
-    margin-top: 20px;
     font-weight: 500;
 }
 
@@ -23,20 +23,20 @@
 
 .navItem a:visited {
     color: #eee9e9;
-    border-bottom: 5px solid gray;
-    padding-bottom: 8px;
+    border-bottom: 3px solid gray;
+    padding-bottom: 6px;
 }
 
 .navItem a:hover {
     color: #a8a3a3;
-    border-bottom: 5px solid gray;
-    padding-bottom: 8px;
+    border-bottom: 3px solid gray;
+    padding-bottom: 6px;
 }
 
 .navItem a:active {
     color: #a8a3a3;
-    border-bottom: 5px solid gray;
-    padding-bottom: 8px;
+    border-bottom: 3px solid gray;
+    padding-bottom: 6px;
 }
 
 .navBrand a:link {
@@ -72,28 +72,27 @@
 /*主体*/
 .main {
     text-align: center;
-}
-
-.main .content {
-    margin-top: 26%;
+    margin-top:10%;
 }
 
 .main .introduction {
     font-size: 20px;
 }
 
-.main .ovalBtn {
+.main .startBtn {
     display: inline-block;
-    height: 40px;
-    line-height: 40px;
-    width: 146px;
-    border-radius: 6px;
+    height: 36px;
+    line-height: 36px;
+    width: 136px;
     text-align: center;
     color: #282324;
     font-size: 20px;
     font-weight: 600;
     background-color: #f8f3f3;
+    border-radius: 6px
 }
+/*--表单样式--*/
+
 
 /*.push{
     padding-bottom: 30px;

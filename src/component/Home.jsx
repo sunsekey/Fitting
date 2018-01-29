@@ -18,14 +18,14 @@ class Home extends React.Component {
                 name: "Fitting"
             },
             itemProps: [
-                {name: "Training Note", url: "training-note"}, {name: "Album", url: "album"}, {
+                {nae: "Training Note", url: "training-note"}, {name: "Album", url: "album"}, {
                     name: "About",
                     url: "about"
                 }
             ]
         };
         const footerContent = "Fitting develop by Jx.Hu";
-        const navItems = navProps.itemProps.map((item, i) =>
+        let navItems = navProps.itemProps.map((item, i) =>
             <Nav.NavItem key={i} item={item}/>
         );
         return (

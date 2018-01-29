@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 class RippleButton extends Component {
     render() {
         return (
-            <button className="ovalBtn ripple">{this.props.content}</button>
+            <button className={"ripple "+this.props.className}>{this.props.content}</button>
         )
     }
 }

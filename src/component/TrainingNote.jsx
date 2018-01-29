@@ -1,10 +1,14 @@
 import React from 'react'
+import EnhancedForm from './EnhancedForm'
+import {Row} from 'react-bootstrap'
 
-class TrainingNote extends React.Component{
+class TrainingNote extends React.Component {
 
     render() {
         return (
-            <h1>TrainingNote</h1>
+            <Row className="formMain">
+                <EnhancedForm/>
+            </Row>
         )
     }
 }
