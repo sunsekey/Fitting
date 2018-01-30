@@ -7,10 +7,10 @@ import Introduction from './Introduction'
 import TrainingNote from './TrainingNote'
 import Album from './Album'
 import About from './About'
+import SelectBox from "./SelectBox";
 
 
 class Home extends React.Component {
-
     render() {
         //variable
         const navProps = {

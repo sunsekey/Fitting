@@ -8,10 +8,11 @@ class EnhancedForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {date: new Date().toLocaleDateString(),bodyParts:[],isSelectBoxHidden:true}
+        this.toggleBodyPartSelection = this.toggleBodyPartSelection.bind(this)
         this.addBodyPart = this.addBodyPart.bind(this)
     }
 
-    addBodyPart(){
+    toggleBodyPartSelection(){
         this.setState((prevState)=>({
             isSelectBoxHidden: !prevState.isSelectBoxHidden
         }))
@@ -28,10 +29,33 @@ class EnhancedForm extends React.Component {
         // }});
     }
 
+    addBodyPart(name){
+        let bodyPart =
+            <Col>
+                <h3>{name}</h3>
+            </Col>;
+        this.setState((prevState) => {
+            prevState.bodyParts.push(bodyPart)
+            return {
+                bodyParts: prevState.bodyParts,
+                isSelectBoxHidden:true
+            }
+        })
+    }
+
     render() {
         let bodyParts = this.state.bodyParts.map((item,i) =>
             <Row key={i}>{item}</Row>
         )
+        let bodyPartSelections = [{
+            name:"背部"
+        },{
+            name:"胸部"
+        },{
+            name:"肩部"
+        },{
+            name:"腿部"
+        }]
         return (
             <form>
                 <Row>
@@ -39,21 +63,16 @@ class EnhancedForm extends React.Component {
                     <Col md={6}>
                         <Row>
                             <Col>
-                                {/*<div style={{verticalAlign:"top",display:"inline-block"}}>*/}
-                                {/*<h2 style={{display:"inline-block",marginLeft:"10px"}}>{this.state.date}</h2>*/}
-                                {/*<IconButton className="glyphicon glyphicon-plus-sign" action={this.addBodyPart}/>*/}
-                                {/*</div>*/}
-                                {/*<div style={{marginLeft:"10px",position:"relative",top:"30px",display:"inline-block"}}>*/}
-                                    {/*<SelectBox isHidden={this.state.isSelectBoxHidden}/>*/}
-                                {/*</div>*/}
-                                <div style={{float:"left"}}>
+                                <div style={{position:"absolute"}}>
                                     <h2 style={{display:"inline-block",marginLeft:"10px"}}>{this.state.date}</h2>
-                                    <IconButton className="glyphicon glyphicon-plus-sign" action={this.addBodyPart}/>
+                                    <IconButton className="glyphicon glyphicon-plus-sign" action={this.toggleBodyPartSelection}/>
                                 </div>
-                                <div style={{float:"left",marginLeft:"10px",marginTop:"30px"}}>
-                                    <SelectBox isHidden={this.state.isSelectBoxHidden}/>
+                                <div style={{position:"absolute",left:"160px",marginLeft:"10px",marginTop:"30px"}}>
+                                    <SelectBox items={bodyPartSelections} onItemClick={this.addBodyPart} isHidden={this.state.isSelectBoxHidden}/>
                                 </div>
                             </Col>
+                        </Row>
+                        <Row style={{marginTop:"70px"}}>
                         </Row>
                         {bodyParts}
                         {/*<Row>

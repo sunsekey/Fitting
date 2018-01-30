@@ -3,12 +3,12 @@ import React from 'react'
 class SelectBox extends React.Component{
 
     render(){
+        let items = this.props.items.map((item,i)=>
+            <li key={i}><span className="option" onClick={(e) => this.props.onItemClick(item.name,e)}>{item.name}</span></li>
+        )
         return (
             <ul className={"optionWrapper animated zoomIn " + (this.props.isHidden ? "hidden" : "")}>
-                <li><span className="option">背部OK没问题</span></li>
-                <li><span className="option">胸部</span></li>
-                <li><span className="option">肩部</span></li>
-                <li><span className="option">腿部</span></li>
+                {items}
             </ul>
         )
     }
